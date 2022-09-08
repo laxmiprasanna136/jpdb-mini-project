@@ -10,7 +10,7 @@
     </head>
     <body>
     <center><h1>Show Data</h1></center>
-    <center><input id="rollno" maxlength="50" placeholder="Roll No" name="rollno" type="text" /><br><br>
+    <center><input id="value" maxlength="50"  name="text" type="text" /><br><br>
         <input type="button" value="SHOW DATA" onclick="showData();"/></center>
     <p id="show"></p>
     <script>
@@ -26,12 +26,12 @@
             return jsonObj;
         }
         function showData(){
-            var token = "90937136|-";
-            var dbname = "CourseData";
-            var relationName = "Candidate-Data";
-            var roll = document.getElementById("rollno").value;
+            var token = "90937380|-31949298398212547|90943288";
+            var dbname = "Student";
+            var relationName = "Student-Rel";
+            var roll = document.getElementById("id").value;
             var jsonStr = {
-                RollNo : roll
+                ID : id
             };
             var reqString = createGETRequest(token, dbname, relationName, JSON.stringify(jsonStr));
             alert(reqString);
